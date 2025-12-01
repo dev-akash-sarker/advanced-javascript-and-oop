@@ -1,5 +1,5 @@
 # Advanced Concept
----------------------------
+
 - Nested Function's scope
 - Closures
 - Curriying

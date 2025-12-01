@@ -8,6 +8,9 @@ let a = 10; // global scope
 function allin (){
     let x = 20
 } // this is function scope
+function allinout (){
+    let x = 20
+} // this is function scope
 
 function outer () {
     let b = 20;

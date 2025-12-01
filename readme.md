@@ -1,0 +1,11 @@
+# Advanced Concept
+---------------------------
+- Nested Function's scope
+- Closures
+- Curriying
+- this keyword
+- Prototype
+- Prototype inheritance
+- Class
+- Iterables and iterators
+- Generators

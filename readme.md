@@ -14,3 +14,9 @@
 - Explicit binding
 - New binding
 - Default binding
+
+# Order of precedence
+- New binding
+- Explicit binding
+- Implicit binding
+- Default binding

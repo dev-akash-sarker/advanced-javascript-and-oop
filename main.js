@@ -1,13 +1,26 @@
-function outer(){
-    let counter  = 0;
-    console.log("outer")
-    return function inner(){
-        counter++;
-        console.log(counter);
+function sum(a,b,c){
+    return a + b * c
+}
+
+console.log(sum(2,3,5));
+
+// sum(2,3,5) sum(2)(3)(5)
+
+function curry(fn){
+    return function(a){
+        return function(b){
+            return function(c){
+                return fn(a,b,c)
+            }
+        }
     }
 }
 
-const fn = outer();
+const curriedSum = curry(sum);
+console.log('Curred sum: ', curriedSum(2)(3)(5))
 
-fn();
-fn();
+const add2 = curriedSum(2);
+const add3 = add2(3);
+const add5 = add3(5)
+
+console.log('add5 :', add5)

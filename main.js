@@ -10,3 +10,4 @@ function outer(){
 const fn = outer();
 
 fn();
+fn();

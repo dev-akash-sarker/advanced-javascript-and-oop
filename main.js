@@ -25,5 +25,6 @@ SuperHero.prototype.fightCrime = function (){
 
 SuperHero.prototype = Object.create(Person.prototype)
 const batman = new SuperHero('bruce', 'wayne');
+SuperHero.prototype.constructor = SuperHero
 
 console.log(batman.getFullName())

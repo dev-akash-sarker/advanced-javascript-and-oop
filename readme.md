@@ -1,16 +1,6 @@
 # Advanced Concept
 
-## This
+## Prototype
 
-- The javascript this keyword which is used in a function , refers to the object it belongs to.
-
-- It makes functions reusable by letting you decide the object value.
-
-- This value is determined entirely by how a function called.
-
-# How to determine `This`
-
-- Implicit binding
-- Explicit binding
-- New binding
-- Default binding
+- Protope are used when we have construction function and also we are using new binding for multiple variables.
+- when we have a multiple functions and also the variable that use the contruction function then it use protype as contruction_function.prototype.myfunction

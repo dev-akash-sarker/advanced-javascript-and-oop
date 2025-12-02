@@ -1,9 +1,16 @@
 # Advanced Concept
 
-## Curriying
+## This
 
-- Currying is a process in a functional programing in which we transform a function with multiple arguments into a sequence of nesting functions that take one argumet at a time
+- The javascript this keyword which is used in a function , refers to the object it belongs to.
 
-- function(a,b,c) is transformed to f(a)(b)(c)
+- It makes functions reusable by letting you decide the object value.
 
+- This value is determined entirely by how a function called.
 
+# How to determine `This`
+
+- Implicit binding
+- Explicit binding
+- New binding
+- Default binding

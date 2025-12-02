@@ -1,26 +1,60 @@
-function sum(a,b,c){
-    return a + b * c
-}
+// function sayMyName(name){
+//     console.log(`My name is ${name}`)
+// }
 
-console.log(sum(2,3,5));
+// sayMyName('Akash');
+// sayMyName('sajal');
 
-// sum(2,3,5) sum(2)(3)(5)
+// Implicit binding
+// Implicit binding rules are refers to most of the time.
 
-function curry(fn){
-    return function(a){
-        return function(b){
-            return function(c){
-                return fn(a,b,c)
-            }
-        }
+const person = {
+    name: 'Akash',
+    sayMyName: function(){
+        console.log(`My name is ${this.name}`)
     }
 }
 
-const curriedSum = curry(sum);
-console.log('Curred sum: ', curriedSum(2)(3)(5))
+// leftside of the dot notation refers THIS keyword that focused with the function
+person.sayMyName()
 
-const add2 = curriedSum(2);
-const add3 = add2(3);
-const add5 = add3(5)
+// when use explicit binding then we use call() method to call which object.
+function sayMyName(){
+    console.log(`My name is ${this.name}`)
+}
 
-console.log('add5 :', add5)
+// here individul function does not have any name so it use explicitly binding.
+sayMyName.call(person)
+// here we see as where we lack name details so we call person object so
+// this can identify which object are refferd to the function.
+
+globalThis.name = 'ferari'; // this is default binding
+const cars = {
+    name: 'BMW',
+    sayMyCarName: function(){
+        console.log(`My car name is ${this.name}`)
+    }
+}
+
+function sayMyCar(){
+    console.log(`my car name is ${this.name}`)
+}
+
+// this is car object where we use New binding.
+// what if the name we need something different
+// here is when we use new binding
+
+function Cars(name){
+    this.name = name
+}
+
+// here we make a new Function as Car where name is a agrument under that this.argument = argument
+
+const c1 = new Cars('Toyota')
+// here  new keyword then the function car under a new name.
+const c2 = new Cars('Hyundai')
+// here  new keyword then the function car under a new name.
+
+console.log(c1.name, c2.name)
+
+sayMyCar();

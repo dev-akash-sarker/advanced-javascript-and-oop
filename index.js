@@ -35,28 +35,28 @@
 // const batman = new SuperHero('akash', 'sarler')
 // console.log(batman.getFullName())
 
-function Person (fName , lName){
-    this.firstName = fName;
-    this.lastName = lName;
-}
+class Animal {
+    constructor(animal){
+        this.animal = animal
+    }
 
-Person.prototype.getFullName = function(){
-    return `my name is ${this.firstName} ${this.lastName}`
-}
-
-function Cricketer(fName, lName, age){
-    Person.call(this, fName, lName);
-    this.age = age;
-}
-Cricketer.prototype = Object.create(Person.prototype)
-Cricketer.prototype.constructor = Cricketer;
-Cricketer.prototype.getInfo = function(){
-  return `${this.firstName} ${this.lastName} is ${this.age} years old`
+    sayMyAnimal(){
+        return `my ${this.animal} is so good to me`
+    }
 }
 
 
 
-const person1 = new Person('sakib', 'all hasan');
-const cricketer1 = new Cricketer('sakib al', 'hasan', 24)
+class Mammal extends Animal {
+    constructor(animal){
+        super(animal);
+    }
+    sayMyNewAnimal(){
+        return `${this.animal} is greate`
+    }
+}
 
-console.dir(cricketer1.getInfo())
+const dogs = new Animal('Dog')
+const cats = new Mammal('Cat')
+console.log(dogs.sayMyAnimal())
+console.log(cats.sayMyNewAnimal())
